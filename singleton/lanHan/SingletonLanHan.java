@@ -23,7 +23,7 @@ public class SingletonLanHan {
     */
     public static synchronized SingletonLanHan getInstance() {
         if (instance == null) {
-            return new SingletonLanHan();
+            instance =  new SingletonLanHan();
         }
         return instance;
     }

@@ -16,7 +16,7 @@ public class SingletonLanHanNotSafety {
     //getter方法获取唯一实例
     public static SingletonLanHanNotSafety getInstance() {
         if (instance == null) {  //写法1：这里很明显线程不安全，连锁都没有
-            return new SingletonLanHanNotSafety();
+            instance =  new SingletonLanHanNotSafety();
         }
 //        if (instance == null) {  //写法2：同样线程不安全，虽然有锁，但加错地方了，锁的粒度太小了，只要能线程能进入if就能创建实例
 //            synchronized (SingletonLanHanNotSafetyHolder.class) {
